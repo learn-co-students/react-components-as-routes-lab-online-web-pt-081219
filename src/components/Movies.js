@@ -1,10 +1,21 @@
-import React from 'react';
-import { movies } from '../data';
+import React from "react";
+import { movies } from "../data";
 
 const Movies = () => {
   return (
     <div>
-        {/*{code here}*/}
+      <h1>Movies Page</h1>
+      {movies.map((movie) => (
+        <div key={movie.title}>
+          {movie.title}
+          <br />
+          {movie.time}
+          <br />
+          {movie.genres}
+          <br />
+          {movie.metascore}
+        </div>
+      ))}
     </div>
   );
 };
